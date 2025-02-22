@@ -1,5 +1,12 @@
 # Execution Context & Call Stack in JavaScript
 
+#### Quick Summary
+✅ Execution Context manages variable & function execution. <br>
+✅ Call Stack follows LIFO (Last In, First Out). <br>
+✅ Every function call creates a new Execution Context. <br>
+✅ Stack Overflow occurs with infinite recursion. <br>
+✅ Async tasks are handled outside the stack.
+
 ## 1️⃣ Execution Context (EC)
 
 ### An Execution Context is the environment where JavaScript code is executed. It consists of:
