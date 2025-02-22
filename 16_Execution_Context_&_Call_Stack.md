@@ -76,3 +76,16 @@
     Second Function
     Global Execution
 
+## 4️⃣ Call Stack Overflow
+
+### If a function calls itself indefinitely, it causes a stack overflow error.
+
+    function recurse() {
+      recurse(); // Infinite Recursion
+    }
+    recurse(); // ❌ Uncaught RangeError: Maximum call stack size exceeded
+
+## 5️⃣ Relation to Asynchronous Code
+
++ JavaScript is single-threaded, meaning only one function executes at a time.
++ Async tasks (e.g., setTimeout(), Promises, API calls) are handled outside the stack using Event Loop and Callback Queue.
