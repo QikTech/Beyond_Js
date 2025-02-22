@@ -34,3 +34,45 @@
 
 + Executes line by line.
 + Assigns values to variables and executes functions.
+
+## 3️⃣ Call Stack
+
+### The Call Stack manages function execution in a Last In, First Out (LIFO) order.
+    // Example
+    
+    function first() {
+      console.log("First Function");
+    }
+    
+    function second() {
+      first();
+      console.log("Second Function");
+    }
+    
+    second();
+    console.log("Global Execution");
+
+#### Execution Process:
+
+1️⃣ Global Execution Context is created. <br>
+2️⃣ second() is called → New Function Execution Context (FEC) is created. <br>
+3️⃣ Inside second(), first() is called → Another FEC is created. <br>
+4️⃣ first() executes and pops off the stack. <br>
+5️⃣ second() executes and pops off the stack. <br>
+6️⃣ console.log("Global Execution") executes.
+
+#### Call Stack Flow
+
+    1. Global Execution Context → Push
+    2. second() → Push
+    3. first() → Push
+    4. first() → Pop
+    5. second() → Pop
+    6. Global Execution → Pop (Execution Ends)
+
+    // Output:
+    
+    First Function
+    Second Function
+    Global Execution
+
