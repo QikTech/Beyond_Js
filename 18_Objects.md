@@ -105,3 +105,18 @@
         console.log(car1.getDetails()); // Output: BMW - X5
 
 #### ✅ Best practice for object-oriented programming (OOP).
+
+## 3. Accessing Object Properties
+#### There are two ways to access object properties:
+### (A) Dot Notation (.)
+        
+        console.log(person.name); // Output: Prasad
+
+### (B) Bracket Notation ([])
+    
+        console.log(person["name"]); // Output: Prasad
+
+### 📌 Use bracket notation when the key is dynamic or contains special characters:
+        
+        const dynamicKey = "age";
+        console.log(person[dynamicKey]); // Output: 30
