@@ -120,3 +120,64 @@
         
         const dynamicKey = "age";
         console.log(person[dynamicKey]); // Output: 30
+
+## 4. Adding, Modifying, and Deleting Properties
+### (A) Adding New Properties
+
+        person.country = "India";
+
+### (B) Modifying Properties
+
+        person.age = 31;
+
+### (C) Deleting Properties
+
+        delete person.age;
+
+#### ✅ Note: delete only removes properties, but does not affect the object's prototype.
+
+## 5. Checking for Property Existence
+### (A) Using the in Operator
+        
+        console.log("name" in person); // Output: true
+        console.log("salary" in person); // Output: false
+        
+### (B) Using hasOwnProperty()
+
+        console.log(person.hasOwnProperty("name")); // Output: true
+
+6. Iterating Over an Object
+(A) Using for...in Loop
+
+for (let key in person) {
+  console.log(`${key}: ${person[key]}`);
+}
+
+(B) Using Object.keys()
+
+console.log(Object.keys(person)); // Output: ['name', 'isDeveloper', 'skills', 'address', 'greet']
+
+(C) Using Object.values()
+
+console.log(Object.values(person)); 
+// Output: ["Prasad", true, Array(3), {…}, ƒ greet()]
+
+(D) Using Object.entries()
+
+console.log(Object.entries(person));
+// Output: [['name', 'Prasad'], ['isDeveloper', true], ...]
+
+7. Object Methods
+
+Objects can have functions as properties, known as methods.
+
+const user = {
+  name: "Rahul",
+  greet() {
+    return `Hello, ${this.name}`;
+  }
+};
+
+console.log(user.greet()); // Output: Hello, Rahul
+
+📌 Note: this refers to the object itself.
