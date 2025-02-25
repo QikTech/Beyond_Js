@@ -146,38 +146,88 @@
 
         console.log(person.hasOwnProperty("name")); // Output: true
 
-6. Iterating Over an Object
-(A) Using for...in Loop
+## 6. Iterating Over an Object
+### (A) Using for...in Loop
+        
+        for (let key in person) {
+          console.log(`${key}: ${person[key]}`);
+        }
 
-for (let key in person) {
-  console.log(`${key}: ${person[key]}`);
-}
+### (B) Using Object.keys()
 
-(B) Using Object.keys()
+        console.log(Object.keys(person)); // Output: ['name', 'isDeveloper', 'skills', 'address', 'greet']
 
-console.log(Object.keys(person)); // Output: ['name', 'isDeveloper', 'skills', 'address', 'greet']
+### (C) Using Object.values()
 
-(C) Using Object.values()
+        console.log(Object.values(person)); 
+        // Output: ["Prasad", true, Array(3), {…}, ƒ greet()]
 
-console.log(Object.values(person)); 
-// Output: ["Prasad", true, Array(3), {…}, ƒ greet()]
+### (D) Using Object.entries()
 
-(D) Using Object.entries()
+        console.log(Object.entries(person));
+        // Output: [['name', 'Prasad'], ['isDeveloper', true], ...]
 
-console.log(Object.entries(person));
-// Output: [['name', 'Prasad'], ['isDeveloper', true], ...]
+## 7. Object Methods
 
-7. Object Methods
+### Objects can have functions as properties, known as methods.
+        
+        const user = {
+          name: "Rahul",
+          greet() {
+            return `Hello, ${this.name}`;
+          }
+        };
+        
+        console.log(user.greet()); // Output: Hello, Rahul
 
-Objects can have functions as properties, known as methods.
+#### 📌 Note: this refers to the object itself.
 
-const user = {
-  name: "Rahul",
-  greet() {
-    return `Hello, ${this.name}`;
-  }
-};
+## 8. Object Spread (...) and Object.assign()
+### (A) Using Spread Operator (...)
+        
+        const obj1 = { a: 1, b: 2 };
+        const obj2 = { c: 3, d: 4 };
+        
+        const merged = { ...obj1, ...obj2 };
+        console.log(merged); // Output: { a: 1, b: 2, c: 3, d: 4 }
 
-console.log(user.greet()); // Output: Hello, Rahul
+### (B) Using Object.assign()
+        
+        const obj3 = Object.assign({}, obj1, obj2);
+        console.log(obj3); // Output: { a: 1, b: 2, c: 3, d: 4 }
 
-📌 Note: this refers to the object itself.
+## 9. Deep vs Shallow Copy
+### (A) Shallow Copy (Only One Level Deep)
+        
+        const objA = { x: 1, y: { z: 2 } };
+        const objB = { ...objA };
+        
+        objB.y.z = 100;
+        console.log(objA.y.z); // Output: 100 (Both objects reference the same nested object)
+
+### (B) Deep Copy (Completely Separate Copy)
+        
+        const objDeep = JSON.parse(JSON.stringify(objA));
+        objDeep.y.z = 200;
+        console.log(objA.y.z); // Output: 100 (Original object remains unchanged)
+
+#### ✅ Deep copying ensures nested objects are also cloned.
+
+## 10. Object Freezing and Sealing
+### (A) Object.freeze() (No Modification Allowed)
+        
+        const obj = { name: "Frozen" };
+        Object.freeze(obj);
+        obj.name = "New"; // ❌ Cannot modify
+        console.log(obj.name); // Output: Frozen
+
+### (B) Object.seal() (Modification Allowed, No New Properties)
+        
+        const obj2 = { name: "Sealed" };
+        Object.seal(obj2);
+        obj2.name = "Updated"; // ✅ Allowed
+        obj2.age = 30; // ❌ Not allowed
+        console.log(obj2); // Output: { name: 'Updated' }
+
+### Conclusion
+#### Objects are the backbone of JavaScript. They allow developers to store structured data efficiently and are used everywhere, from APIs to OOP concepts.
