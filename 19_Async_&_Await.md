@@ -26,6 +26,17 @@
       
       getData();
 
+## Promise in JavaScript?
++ A Promise in JavaScript is a special object that waits for a task to finish and then either returns a result (resolve) or an error (reject).
++ A Promise in JavaScript is an object that represents the eventual completion (resolve) or failure (reject) of an asynchronous operation.
+
+### Promise States <br>
+A Promise can be in one of three states:
+
+1. Pending – The initial state (not yet fulfilled or rejected).
+2. Fulfilled – The operation was successful (resolve() was called).
+3. Rejected – The operation failed (reject() was called).
+
 ## 🔹 Error Handling with try...catch
 
 + async/await allows handling errors using try...catch, making it easier than chaining .catch() in Promises.
