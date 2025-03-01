@@ -25,3 +25,44 @@
       }
       
       getData();
+
+## 🔹 Error Handling with try...catch
+
++ async/await allows handling errors using try...catch, making it easier than chaining .catch() in Promises.
+      
+      async function fetchUser() {
+          try {
+              let response = await fetch("https://invalid-url.com");
+              let data = await response.json();
+              console.log(data);
+          } catch (error) {
+              console.error("Error fetching data:", error);
+          }
+      }
+      
+      fetchUser();
+
+## 🔹 Parallel Execution with Promise.all
+
++ If multiple independent async tasks need to be executed together, use Promise.all() for better performance.
+      
+      async function fetchAllData() {
+          let [user, posts] = await Promise.all([
+              fetch("https://jsonplaceholder.typicode.com/users/1").then(res => res.json()),
+              fetch("https://jsonplaceholder.typicode.com/posts/1").then(res => res.json())
+          ]);
+      
+          console.log(user, posts);
+      }
+      
+      fetchAllData();
+
+## 🔹 Using await Outside of async (Top-Level Await)
+
++ In modern JavaScript (ES2022+), await can be used outside async functions in modules.
+      
+      let response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+      let data = await response.json();
+      console.log(data);
+      
+    📌 Note: This works only inside ES modules (type="module" in <script> tag or .mjs files).
