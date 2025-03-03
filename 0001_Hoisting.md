@@ -1,5 +1,17 @@
 # Hoisting
+## JavaScript hoisting means JavaScript moves variable and function declarations to the top before running the code.
 ### Hoisting is JavaScript’s behavior of moving variable and function declarations to the top of their scope before the code executes. This means you can use variables and functions before declaring them.
+
++ Hoisting moves declarations to the top – JavaScript moves variable and function declarations to the top of their scope before execution.
++ Only declarations are hoisted, not values – Variables declared with var are hoisted without their assigned values, while let and const are hoisted but remain in a "temporal dead zone" until assigned.
++ Function declarations are fully hoisted – You can call a function before its declaration in the code because JavaScript hoists the entire function.
++ let and const behave differently – Unlike var, they are hoisted but not initialized, meaning using them before declaration causes a ReferenceError.
++ Hoisting happens in the compilation phase – Before executing the code, JavaScript first scans and hoists declarations during the compilation phase.
++ Function expressions are not hoisted – If you assign a function to a variable (e.g., const myFunc = function() {}), it behaves like a variable and is not accessible before its declaration.
++ Arrow functions follow variable hoisting rules – An arrow function stored in var, let, or const behaves like a variable and is not available before declaration.
++ Avoid hoisting issues with let and const – To prevent unexpected behavior, prefer let and const over var, as they do not allow access before declaration.
++ Hoisting applies to both global and function scopes – Declarations are hoisted within their respective scopes, whether inside a function or in the global scope.
++ Use strict mode ("use strict") to avoid hoisting pitfalls – In strict mode, using a variable before declaring it throws an error, helping catch hoisting-related issues.
 ___
 
 ### Summary
