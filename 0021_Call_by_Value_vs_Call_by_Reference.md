@@ -87,3 +87,43 @@ JavaScript follows Call by Value for primitive types and Call by Reference (or C
 
 + Primitives (Numbers, Strings, Booleans, etc.) → Call by Value (unchanged)
 + Objects & Arrays → Call by Sharing (mutations affect the original object, but reassignment doesn't)
+
+
+
+# In General Programming
+
+## 1. Call by Value In General Programming
+
++ A copy of the actual argument is passed to the function.
++ Changes made inside the function do not affect the original variable.
++ Memory for function arguments is allocated separately.
++ Used in languages like C, Java (for primitive data types), Python (for immutable types like int, str, tuple).
+
+      Example (C - Call by Value)
+      
+      #include <stdio.h>
+      
+      void modify(int x) {
+          x = x + 10;
+          printf("Inside function: %d\n", x);
+      }
+      
+      int main() {
+          int a = 5;
+          modify(a);
+          printf("Outside function: %d\n", a); // Original value remains unchanged
+          return 0;
+      }
+      
+      Output:
+      
+      Inside function: 15
+      Outside function: 5
+      
+## 2. Call by Reference In General Programming
+
++ Instead of passing a copy, a reference (or address) to the actual argument is passed.
++ Changes made inside the function reflect in the original variable.
++ No separate memory is allocated for function arguments.
++ Used in **C++ (with references), Java (for objects), Python
+
