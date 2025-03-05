@@ -1,11 +1,63 @@
 # Call by Value vs Call by Reference
 
 ## Call by Value
-In Call by Value, a copy of the actual argument is passed to the function, and any modifications inside the function do not affect the original variable.
+Definition: In call by value, a copy of the actual value of the argument is passed to the function. This means that any changes made to the parameter inside the function do not affect the original variable.
+
+Characteristics:
+
+    Copy of Value: The function receives a copy of the variable's value, stored in a separate memory location.
+
+    Memory Usage: Different memory locations are used for actual arguments and parameters.
+
+    No Side Effects: Changes made inside the function do not reflect outside, ensuring data integrity.
+
+    Common Languages: Supported by languages like C, Java, and Python (for primitive data types).
+
+Advantages:
+
+    Preserves the original data, preventing accidental modifications.
+
+    Safer for functions that should not alter input data.
+
+Disadvantages:
+
+    Less efficient for large data structures due to overhead from copying values.
+
+    Cannot modify the original variable directly.
+
 
 ## Call by Reference
 
-In Call by Reference, a reference (or address) of the actual argument is passed to the function, allowing modifications inside the function to directly affect the original variable.
+Definition: In call by reference, instead of passing copies of values, references (or addresses) to the actual variables are passed to the function. This allows the function to modify the original variable.
+
+Characteristics:
+
+    Direct Access: The function operates directly on the original variable through its reference.
+
+    Shared Memory: Both actual arguments and parameters share the same memory location.
+
+    Side Effects Possible: Changes made inside the function will affect the original variable.
+
+Advantages:
+
+    More efficient for large data structures since no copies are made.
+
+    Allows functions to modify input variables directly.
+
+Disadvantages:
+
+    Risk of unintended side effects if not managed carefully.
+
+    Requires careful handling of pointers or references, especially in multi-threaded environments.
+
+## Comparison Table
+Feature ||	Call by Value ||	Call by Reference
+----   ||    ----    ||    ----
+Argument Passing || Passes a copy of the variable's value || Passes a reference (address) of the variable
+Memory Location || Different memory locations for parameters ||	Same memory location for parameters
+Modification Impact ||	No effect on original variable ||	Changes affect original variable
+Safety ||	Safer, as it prevents accidental changes || Riskier, as it can lead to unintended modifications
+Performance with Large Data || Less efficient due to copying overhead || More efficient as it avoids copying
 
 ## Call by Value in JavaScript
 
@@ -126,4 +178,5 @@ JavaScript follows Call by Value for primitive types and Call by Reference (or C
 + Changes made inside the function reflect in the original variable.
 + No separate memory is allocated for function arguments.
 + Used in **C++ (with references), Java (for objects), Python
+
 
