@@ -3,7 +3,7 @@
 Event-Driven Programming (EDP) is a programming paradigm where the flow of execution is determined by events like user actions, system signals, or messages from other programs.
 - Node.js is inherently event-driven. It is built around an event-driven, non-blocking I/O model, making it highly efficient for handling asynchronous tasks like network requests, file I/O, and real-time applications.
 
-###Key Concepts of Event-Driven Programming
+## Key Concepts of Event-Driven Programming
 
 1. Events
 	- Actions or occurrences that the program responds to.
@@ -29,38 +29,38 @@ Event-Driven Programming (EDP) is a programming paradigm where the flow of execu
 		document.getElementById("myButton").addEventListener("click", function() {
 		alert("Button clicked!");
 		});
-
+		
 		Here, addEventListener listens for a click event, and when triggered, it executes the given function.
 		Example in Node.js
-
+		
 		const EventEmitter = require('events');
 		const eventEmitter = new EventEmitter();
-
+		
 		// Define an event handler
 		eventEmitter.on('greet', (name) => {
 		console.log(`Hello, ${name}!`);
 		});
-
+		
 		// Trigger the event
 		eventEmitter.emit('greet', 'Prasad');
-
+		
 		Output:
-
+		
 		Hello, Prasad!
-
+		
 		Here, emit triggers the event, and the corresponding handler executes.
 
 ### Advantages of Event-Driven Programming
 
-✅ Better User Experience - Ideal for interactive applications like UI/UX-driven software.
-✅ Efficient Resource Usage - Events occur only when needed, reducing unnecessary computations.
-✅ Asynchronous Processing - Handles multiple events without blocking execution.
+✅ Better User Experience - Ideal for interactive applications like UI/UX-driven software. <br>
+✅ Efficient Resource Usage - Events occur only when needed, reducing unnecessary computations. <br>
+✅ Asynchronous Processing - Handles multiple events without blocking execution. <br>
 ✅ Modularity & Scalability - Components remain independent, making it easy to modify and scale.
 
 ### Common Use Cases
 
-📌 Graphical User Interfaces (GUIs) - Web and mobile apps (React, Flutter, Android).
-📌 Game Development - Handling user inputs, collisions, animations.
-📌 IoT (Internet of Things) - Sensor-based event handling.
-📌 Networking & Servers - Node.js servers processing HTTP requests asynchronously.
+📌 Graphical User Interfaces (GUIs) - Web and mobile apps (React, Flutter, Android). <br>
+📌 Game Development - Handling user inputs, collisions, animations. <br>
+📌 IoT (Internet of Things) - Sensor-based event handling. <br>
+📌 Networking & Servers - Node.js servers processing HTTP requests asynchronously. <br>
 📌 Real-time Applications - Chat applications, stock price tracking, live notifications.
