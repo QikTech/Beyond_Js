@@ -3,6 +3,9 @@
 ### Asynchronous programming allows JavaScript to execute tasks without blocking the main thread, enabling smooth execution of time-consuming operations like API calls, file reading, or database queries.
 
 ### 1️⃣ Synchronous vs. Asynchronous
+### Synchronous 	→ Code executes line by line, waiting for each operation to complete.
+### Asynchronous 	→ Tasks like API calls, file reading, or database queries happen in the background, allowing other code to run.
+
 
 ## 1.1 Synchronous Code (Executes line by line, blocking the next task until the current one is done)
       
