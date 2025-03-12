@@ -37,29 +37,31 @@ Key Points to Speak in an Interview:
 
 #### These patterns help create objects in a flexible and efficient way.
 
-Pattern	|| Purpose ||	Example
-|| ---- || ---- || ---- ||
-Singleton	|| Ensures a class has only one instance and provides a global access point. ||	Database connection, Logging system.
-Factory ||	Creates objects without specifying the exact class. ||	Creating different types of user objects (Admin, Guest, Member).
-Builder ||	Constructs complex objects step by step. ||	Configuring a car with custom features.
+Pattern	| Purpose |	Example
+| ---- | ---- | ---- |
+Singleton	| Ensures a class has only one instance and provides a global access point. |	Database connection, Logging system.
+Factory |	Creates objects without specifying the exact class. |	Creating different types of user objects (Admin, Guest, Member).
+Builder |	Constructs complex objects step by step. |	Configuring a car with custom features.
 
 ## 2️⃣ Structural Patterns (Code Organization)
 
 These patterns define the structure and composition of code components.
 
-Pattern ||	Purpose ||	Example
-Module ||	Encapsulates related functions, making them reusable and maintainable. ||	ES6 Modules (import/export).
-Decorator ||	Dynamically adds behavior to objects without modifying them. ||	Middleware in Express.js.
-Proxy	|| Controls access to an object, adding extra functionality. ||	API request caching, Virtual DOM in React.
+Pattern |	Purpose |	Example
+| ---- | ---- | ---- |
+Module |	Encapsulates related functions, making them reusable and maintainable. |	ES6 Modules (import/export).
+Decorator |	Dynamically adds behavior to objects without modifying them. |	Middleware in Express.js.
+Proxy	| Controls access to an object, adding extra functionality. |	API request caching, Virtual DOM in React.
 
 ## 3️⃣ Behavioral Patterns (Communication & Interaction)
 
 These patterns focus on how objects interact and behave.
 
-Pattern ||	Purpose ||	Example
-Observer ||	Establishes a one-to-many relationship, where one object updates multiple dependent objects. ||	Event handling (addEventListener), Redux store updates.
-Strategy ||	Defines a family of algorithms and makes them interchangeable. ||	Payment processing (PayPal, Stripe, Razorpay).
-Command ||	Encapsulates a request as an object, allowing delayed execution. ||	Undo/Redo functionality.
+Pattern |	Purpose |	Example
+| ---- | ---- | ---- |
+Observer |	Establishes a one-to-many relationship, where one object updates multiple dependent objects. |	Event handling (addEventListener), Redux store updates.
+Strategy |	Defines a family of algorithms and makes them interchangeable. |	Payment processing (PayPal, Stripe, Razorpay).
+Command |	Encapsulates a request as an object, allowing delayed execution. |	Undo/Redo functionality.
 
 
 # 🛠️ Commonly Used JavaScript Design Patterns (With Examples)
