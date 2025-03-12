@@ -51,13 +51,13 @@ Disadvantages:
     Requires careful handling of pointers or references, especially in multi-threaded environments.
 
 ## Comparison Table
-Feature ||	Call by Value ||	Call by Reference
-----   ||    ----    ||    ----
-Argument Passing || Passes a copy of the variable's value || Passes a reference (address) of the variable
-Memory Location || Different memory locations for parameters ||	Same memory location for parameters
-Modification Impact ||	No effect on original variable ||	Changes affect original variable
-Safety ||	Safer, as it prevents accidental changes || Riskier, as it can lead to unintended modifications
-Performance with Large Data || Less efficient due to copying overhead || More efficient as it avoids copying
+Feature |	Call by Value | Call by Reference
+----   |    ----    |    ----
+Argument Passing | Passes a copy of the variable's value | Passes a reference (address) of the variable
+Memory Location | Different memory locations for parameters |	Same memory location for parameters
+Modification Impact |	No effect on original variable | Changes affect original variable
+Safety |	Safer, as it prevents accidental changes | Riskier, as it can lead to unintended modifications
+Performance with Large Data | Less efficient due to copying overhead | More efficient as it avoids copying
 
 ## Call by Value in JavaScript
 
