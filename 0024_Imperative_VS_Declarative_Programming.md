@@ -29,6 +29,27 @@
 ## Declarative Programming
 ### type of programming paradigm that describes what programs to be executed. Developers are more concerned with the answer that is received. It declares what kind of results we want and leave programming language aside focusing on simply figuring out how to produce them.
 
+## ✨ Declarative Programming
+
++ Focus: What you want to achieve, not how to do it.
++ You describe the desired outcome, and let the language/library figure out the steps.
+
+        🔸 Example (in JavaScript):
+        
+        let numbers = [1, 2, 3, 4, 5];
+        let squared = numbers.map(n => n * n);
+        console.log(squared); // [1, 4, 9, 16, 25]
+
+## ✅ Pros:
+
++ Cleaner, shorter, and more readable code.
++ Easier to maintain and reason about.
+
+## ❌ Cons:
+
++ Less control over internal operations.
++ May have performance limitations in some cases.
+
 Imperative Programming | Declarative Programming  
 ---- | ----
 In this, programs specify how it is to be done.  | In this, programs specify what is to be done.  
