@@ -1,6 +1,31 @@
 ## Imperative Programming
 ### Type of programming paradigm that describes how the program executes. Developers are more concerned with how to get an answer step by step. It comprises the sequence of command imperatives
 
+## 🛠 Imperative Programming
+
++ Focus: How to do something.
++ You write step-by-step instructions for the computer to follow.
++ You manage the control flow, like loops, conditions, and assignments.
+
+    🔸 Example (in JavaScript):
+    
+    let numbers = [1, 2, 3, 4, 5];
+    let squared = [];
+    for (let i = 0; i < numbers.length; i++) {
+      squared.push(numbers[i] * numbers[i]);
+    }
+    console.log(squared); // [1, 4, 9, 16, 25]
+
+#### ✅ Pros:
+
++ More control over logic and flow.
++ Useful for performance optimization and low-level programming.
+
+#### ❌ Cons:
+
++ More code and complexity.
++ Higher chance of bugs due to mutable state and manual flow control.
+
 ## Declarative Programming
 ### type of programming paradigm that describes what programs to be executed. Developers are more concerned with the answer that is received. It declares what kind of results we want and leave programming language aside focusing on simply figuring out how to produce them.
 
