@@ -1,7 +1,19 @@
-## Imperative Programming
-### Type of programming paradigm that describes how the program executes. Developers are more concerned with how to get an answer step by step. It comprises the sequence of command imperatives
+Imperative 🆚 Declarative Quick Comparison:
+Aspect | Imperative |	Declarative
+--- | --- | ---
+Focus |	How to do it |	What to do
+Style |	Step-by-step |	Outcome-oriented
+Control Flow |	Explicit (loops, if, etc.) |	Abstracted (functions, queries)
+Examples |	C, Java, Python (low-level) |	SQL, HTML, React, Haskell
+
+## 📌 Real-world analogy:
+
++ Imperative: Telling someone exactly how to cook a dish — “chop onions, heat oil, add spices...”
++ Declarative: Just saying “Make me a spicy curry,” and letting the chef decide the steps.
 
 ## 🛠 Imperative Programming
+
+### Type of programming paradigm that describes how the program executes. Developers are more concerned with how to get an answer step by step. It comprises the sequence of command imperatives
 
 + Focus: How to do something.
 + You write step-by-step instructions for the computer to follow.
@@ -26,10 +38,10 @@
 + More code and complexity.
 + Higher chance of bugs due to mutable state and manual flow control.
 
-## Declarative Programming
-### type of programming paradigm that describes what programs to be executed. Developers are more concerned with the answer that is received. It declares what kind of results we want and leave programming language aside focusing on simply figuring out how to produce them.
 
 ## ✨ Declarative Programming
+
+### type of programming paradigm that describes what programs to be executed. Developers are more concerned with the answer that is received. It declares what kind of results we want and leave programming language aside focusing on simply figuring out how to produce them.
 
 + Focus: What you want to achieve, not how to do it.
 + You describe the desired outcome, and let the language/library figure out the steps.
