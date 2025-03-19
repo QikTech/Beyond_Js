@@ -46,51 +46,32 @@
     
     Note: this refers to the object calling the method.
 ##  6. Nested Objects
+        
+        const student = {
+          name: "Ravi",
+          address: {
+            city: "Pune",
+            pincode: 411001
+          }
+        };
+        console.log(student.address.city); // Pune
 
-const student = {
-  name: "Ravi",
-  address: {
-    city: "Pune",
-    pincode: 411001
-  }
-};
-console.log(student.address.city); // Pune
+## 7. Object Destructuring (ES6)
+        
+        const { name, age } = person;
+        console.log(name, age);
+        
+        Nested destructuring:
+        
+        const { address: { city } } = student;
 
-🆕 7. Object Destructuring (ES6)
+## 8. Spread & Rest with Objects
+        
+        const newPerson = { ...person, country: "India" }; // Spread
+        
+        const { city, ...rest } = person; // Rest
 
-const { name, age } = person;
-console.log(name, age);
-
-Nested destructuring:
-
-const { address: { city } } = student;
-
-📤 8. Spread & Rest with Objects
-
-const newPerson = { ...person, country: "India" }; // Spread
-
-const { city, ...rest } = person; // Rest
-
-🧩 9. Object.freeze() and Object.seal()
+## 9. Object.freeze() and Object.seal()
 
     Object.freeze(obj) → Makes the object immutable.
     Object.seal(obj) → Allows value updates but prevents adding/removing properties.
-
-🏗 10. Constructor Functions & Object.create()
-➤ Constructor Function:
-
-function Car(model, year) {
-  this.model = model;
-  this.year = year;
-}
-const car1 = new Car("Honda", 2022);
-
-➤ Object.create():
-
-const proto = {
-  greet() {
-    console.log("Hello!");
-  }
-};
-const obj = Object.create(proto);
-obj.greet(); // Hello!
