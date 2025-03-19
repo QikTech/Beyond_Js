@@ -51,3 +51,41 @@ You can extract values from nested objects too:
     
     const { details: { department = "" } = {} } = employee;
 
+## 5. Destructuring in Function Parameters
+
+You can destructure directly in function arguments:
+    
+    function displayUser({ name, city }) {
+      console.log(`${name} lives in ${city}`);
+    }
+    
+    displayUser(user); // Prasad lives in Mumbai
+
+## 6. Destructuring with Rest Operator
+
+You can gather the remaining properties using ...rest:
+    
+    const { name, ...rest } = user;
+    console.log(name); // Prasad
+    console.log(rest); // { age: 30, city: "Mumbai" }
+
+## 7. Destructuring in Loops
+    
+    const people = [
+      { name: "Amit", age: 28 },
+      { name: "Neha", age: 26 }
+    ];
+    
+    for (const { name, age } of people) {
+      console.log(`${name} is ${age} years old`);
+    }
+
+## Summary
+Use Case |	Syntax Example
+-- | --
+Basic	| const { name } = user;
+Renaming |	const { name: fullName } = user;
+Default Values |	const { country = "India" } = user;
+Nested Destructuring | const { details: { department } } = employee;
+In Function Parameters |	function show({ name }) {}
+With Rest Operator |	const { name, ...rest } = user;
