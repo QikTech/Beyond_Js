@@ -75,3 +75,24 @@
 
     Object.freeze(obj) → Makes the object immutable.
     Object.seal(obj) → Allows value updates but prevents adding/removing properties.
+
+    
+# 10. Constructor Functions & Object.create()
+## ➤ Constructor Function:
+        
+        function Car(model, year) {
+          this.model = model;
+          this.year = year;
+        }
+        const car1 = new Car("Honda", 2022);
+
+## ➤ Object.create():
+        
+        const proto = {
+          greet() {
+            console.log("Hello!");
+          }
+        };
+        const obj = Object.create(proto);
+        obj.greet(); // Hello!
+
