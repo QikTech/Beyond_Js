@@ -1,15 +1,8 @@
-Array Destructuring in JavaScript
+#Array Destructuring in JavaScript
 
-Array destructuring allows you to unpack values from an array into distinct variables easily.
-1. Basic Destructuring
-
-const numbers = [1, 2, 3];
-
-const [a, b, c] = numbers;
-
-console.log(a); // 1
-console.log(b); // 2
-console.log(c); // 3
+## Array destructuring allows you to unpack values from an array into distinct variables easily.
+## 1. Basic Destructuring
+     sole.log(c); // 3
 
 2. Skipping Elements
 
